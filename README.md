@@ -1,25 +1,16 @@
 # KEST3CR05EU - Lokaverkefni
 
-Höfundur: _Pétur Steinn Guðmundsson_.
+ _Livinus felix bassey_.
 
 ## Lýsing
 
-Í þessu verkefni átti að setja upp Tækniskólanetið (að hluta til).
+Í þessu verkefni á að setja upp netkerfi fyrir fyrirtæki (að hluta til).
 
-## Upplýsingunum er skipt í fjóra hluta:
+Upplýsingunum er skipt í :
 
-### Dagbók
+ Dagbók
 
-Má finna undir _dagbok.md_.
+ General
 
-### Yfirlit net skipulags
+ Access-Upplýsingar varðandi aðgang
 
-Má finna undir _general.md_.
-
-### Ýtarlegar upplýsingar tækja
-
-Má finna undir _devices.md_.
-
-### Upplýsingar varðandi aðgang
-
-Má finna undir _access.md_.
