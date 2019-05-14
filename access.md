@@ -1,8 +1,11 @@
 
 
-Allar router-um og switch-um eru að nota þessi neðan: 
+Aðgang fyrir Allar router-um og switch-um eru að nota þessi neðan: 
 
 
-Username 	| 	  Password/Secret 	| 	    Service	
+Username :   admin		  		    	
 							
-admin			| 	          	deild		| 	      SSH Enable
+Password/Secret:   deild		
+
+Service:    SSH 
+	   Enable| 	          				      
