@@ -1,57 +1,78 @@
 # Dagbók
 
-#### Fimmtudagur, 22. nóvember
+Username | Password/Secret | Service	
+							
+192.168.64.0/24	   Vlan 64 -Bókhald	  
 
--   Opnaði Excel.
--   Pældi í því hvernig IP tölum yrði úthlutað.
 
-#### Mánudagur, 26. nóvember
+Reykjavik Bókhald	     Vlan 64
+Reykjavik Markaðsdeild   Vlan 67					
+Reykjavik Söludeild	 	 Vlan 68
+Reykjavik Tölvudeild	 Vlan 70
+Reykjavik Yfirstjórn	 Vlan 65
 
--   Breytti yfir í Numbers.
+Isafjörður Markaðsdeild	 Vlan 67
+Isafjörður Mannauðsdeild Vlan 69
+Isafjörður Launadeild	 Vlan 66
 
-#### Þriðjudagur, 27. nóvember
+Akureyri Söludeild	     Vlan 68
+Akureyri Tölvudeild	     Vlan 70
+Akureyri Launadeild	     Vlan 66
 
--   Kláraði að hanna IP tölu töfluna
--   Heyrði í Róberti baby með VLAN 150, hvernig hann græjaði það og afhverju.
--   Setti inn í Packet Tracer alla switcha, routera, servera, tölvur og tengdi eins og ég gat.
--   Bjó til aðra töflu fyrir nákvæmar IP addressur og fleiri net-upplýsingar fyrir allann netbúnað.
+Egilsstaðir Söludeild	 Vlan 68
 
-#### Miðvikudagur, 28. nóvember
 
--   Kláraði VLAN uppsetningu fyrir skólastofur í Vörðu, Hafnafirði og Háteigsvegi.
--   Skipulagði og setti IP tölur á routera.
--   Reddaði VLAN 150, 151 á Skólavarða-Servers ásamt henti ég viðeigandi subinterfaces á Skólavarða-Internal.
--   Setti upp RIPv2 á Skólavarða-Edge, Skólavarða-Internal og Varða-Main. Passive-interfaces á öll óviðeigandi port. (Þegar ég nota samt `network` skipunina þá breytist samt ekki 'network' í `show ip protocols`)
--   Setti default route á Hafnafjörður-Edge og Háteigsvegur-Edge á Skólavörðu-Edge.
 
-#### Fimmtudagur, 29. nóvember
 
--   Bjó til floating static route á Skólavarða-Edge yfir á Hafnafjörð og Háteigsveg. S.s. bara 10.(7/8).0.0 255.255.0.0 (Veit ekki hvort það var besta leiðin en það virkar fínt).
--   Til þess að RIPv2 myndi deila static routinu á Skólavörðu-Edge bætti ég við skipuninni `redistribute static`. Þá geta allir skólar talað saman loksins!
--   Græjaði starfsmenn vlön og switches á hæð 2 í Vörðu ásamt skrifstofu switches á hæð 1 í Hafnafirði og Háteigsvegi.
--   Sagði Skólavarða-Edge að hann væri origin (RIPv2)
--   Hýsti www.robbi.is á WEB serverinn.
--   Græjaði DNS serverinn.
--   Hýsti www.starfsmenn.is á Starfsmenn serverinn.
--   Setti ACL á g0/0.151 out á Skólavarða-Internal sem leyfir bara starfsmanna netum.
--   Setti IP tölu á Mail serverinn.
--   Excludaði miljón ip tölum fyrir dhcp.
+Network		   vlan Number name	DHCP pool 				 
+							
+192.168.64.0/24	   Vlan 64 -Bókhald	  Vlan 64	  	
+192.168.65.0/24	   Vlan 65 -Yfirstjórn	  Vlan 65 
+192.168.66.0/24	   Vlan 66 -Launadeild	  Vlan 66
+192.168.67.0/24	   Vlan 67 -Markaðsdeild  Vlan 67
+192.168.68.0/24	   Vlan 68 -Söludeild	  Vlan 68
+192.168.69.0/24	   Vlan 69 -Mannauðsdeild Vlan 69
+192.168.70.0/24	   Vlan 70 -Tölvudeild	  Vlan 70
 
-#### Mánudagur, 3. desember
 
--   Kláraði DHCP uppsetningu.
--   Lagaði villu á Hafnafjörður-Distrubution þar sem VLAN630-633 var ekki til.
+192.168.64.0/21
+192.168.64.0/24 
 
-#### Miðvikudagur, 5.desember
 
--   Setti upp management vlan ásamt default-gateway á Varða-Distrubution Skólavarða-Skrifstofa, Hafnafjörður-Distrubution og Háteigsvegur-Distrubution switchana.
--   Sub-interfaceaði Varða-Main, Skólavarða-Internal, Hafnafjörður-Edge og Háteigsvegur-Edge.
--   Bætti við VLAN 799 á Hafnafjörður-Main switchinn til að getað flutt það á milli. Sömuleiðis með VLAN 899 á Háteigsvegur-Main.
--   Breytti um hostnames á helstu tækjum.
--   Setti upp SSH version 2 á alla switches sem eru með management vlan.
--   Setti upp helstu öryggisráðstafanir slíkt sem enable secret, line con 0 password, service password-encryption.
--   Bætti við SSH aðgang á Skolavarda-Servers á VLAN 151.
--   Lokaði á SSH aðgang fyrir alla nema starfsmenn (bjó till ACL á viðeigandi routers og bætti við á subinterfaces).
--   Copy run start á allt draslið.
 
-# Það eina sem ég á eftir er að gera DNS, MAIL og WEB aðgengilega á internetinu.
+ Network		  		Range			Broadcast	Subnet Mask
+Net	Network addr.	Fyrsta nothæfa	Síðasta nothæfa	     Broadcast addr.	Subnet mask
+
+		
+				
+Bókhald:
+LAN1 192.168.64.0/24    192.168.64.1 - 192.168.64.254	  192.168.64.255    255.255.255.0		
+
+
+Yfirstjórn:
+LAN2 192.168.65.0/24   	192.168.65.1 - 192.168.65.254     192.168.65.255   255.255.255.0
+
+
+Launadeild:
+LAN3 192.168.66.0/24    192.168.66.1 - 192.168.66.254     192.168.66.255   255.255.255.0
+
+
+Markaðsdeild:
+LAN4 192.168.67.0/24    192.168.67.1 - 192.168.67.254     192.168.67.255   255.255.255.0
+
+
+Söludeild:
+LAN5 192.168.68.0/24	192.168.68.1	192.168.68.254	  192.168.68.255   255.255.255.0
+
+
+Mannauðsdeild:
+LAN6 192.168.69.0/24	192.168.69.1	192.168.69.254	  192.168.69.255   255.255.255.0
+
+
+Tölvudeild:
+LAN7 192.168.70.0/24	192.168.70.1	192.168.70.254	  192.168.70.255   255.255.255.0
+
+
+
+
+
