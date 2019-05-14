@@ -1,13 +1,12 @@
 # Dagbók
-
-Username | Password/Secret | Service	
+	
 							
 192.168.64.0/24	   Vlan 64 -Bókhald	  
 
 
-Reykjavik Bókhald	     Vlan 64
+Reykjavik Bókhald	 Vlan 64
 Reykjavik Markaðsdeild   Vlan 67					
-Reykjavik Söludeild	 	 Vlan 68
+Reykjavik Söludeild	 Vlan 68
 Reykjavik Tölvudeild	 Vlan 70
 Reykjavik Yfirstjórn	 Vlan 65
 
@@ -15,24 +14,24 @@ Isafjörður Markaðsdeild	 Vlan 67
 Isafjörður Mannauðsdeild Vlan 69
 Isafjörður Launadeild	 Vlan 66
 
-Akureyri Söludeild	     Vlan 68
-Akureyri Tölvudeild	     Vlan 70
-Akureyri Launadeild	     Vlan 66
+Akureyri Söludeild	 Vlan 68
+Akureyri Tölvudeild	 Vlan 70
+Akureyri Launadeild	 Vlan 66
 
 Egilsstaðir Söludeild	 Vlan 68
 
 
 
 
-Network		   vlan Number name	DHCP pool 				 
+Network		   vlan Number name		DHCP pool 				 
 							
-192.168.64.0/24	   Vlan 64 -Bókhald	  Vlan 64	  	
-192.168.65.0/24	   Vlan 65 -Yfirstjórn	  Vlan 65 
-192.168.66.0/24	   Vlan 66 -Launadeild	  Vlan 66
-192.168.67.0/24	   Vlan 67 -Markaðsdeild  Vlan 67
-192.168.68.0/24	   Vlan 68 -Söludeild	  Vlan 68
-192.168.69.0/24	   Vlan 69 -Mannauðsdeild Vlan 69
-192.168.70.0/24	   Vlan 70 -Tölvudeild	  Vlan 70
+192.168.64.0/24	   Vlan 64 -Bókhald	  	Vlan 64	  	
+192.168.65.0/24	   Vlan 65 -Yfirstjórn	  	Vlan 65 
+192.168.66.0/24	   Vlan 66 -Launadeild	  	Vlan 66
+192.168.67.0/24	   Vlan 67 -Markaðsdeild  	Vlan 67
+192.168.68.0/24	   Vlan 68 -Söludeild	  	Vlan 68
+192.168.69.0/24	   Vlan 69 -Mannauðsdeild 	Vlan 69
+192.168.70.0/24	   Vlan 70 -Tölvudeild	  	Vlan 70
 
 
 192.168.64.0/21
@@ -41,6 +40,7 @@ Network		   vlan Number name	DHCP pool
 
 
  Network		  		Range			Broadcast	Subnet Mask
+ 
 Net	Network addr.	Fyrsta nothæfa	Síðasta nothæfa	     Broadcast addr.	Subnet mask
 
 		
