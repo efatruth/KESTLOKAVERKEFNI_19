@@ -8,4 +8,4 @@ Username :   admin
 Password/Secret:   deild		
 
 Service:    SSH 
-	   Enable| 	          				      
+	   Enable	          				      
