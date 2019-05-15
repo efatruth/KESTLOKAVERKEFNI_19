@@ -1,73 +1,39 @@
-# Dagbók	  
+
+# Dagbók
+
+####þriðjudagur,30. april
+-   Opnaði Sublime text.
+-   Pældi í því hvernig IP tölum yrði úthlutað.
 
 
-Reykjavik Bókhald	 		Vlan 64
-Reykjavik Markaðsdeild  		Vlan 67					
-Reykjavik Söludeild	 		Vlan 68
-Reykjavik Tölvudeild	 		Vlan 70
-Reykjavik Yfirstjórn	 		Vlan 65
-
-Isafjörður Markaðsdeild	 		Vlan 67
-Isafjörður Mannauðsdeild 		Vlan 69
-Isafjörður Launadeild	 		Vlan 66
-
-Akureyri Söludeild	 		Vlan 68
-Akureyri Tölvudeild	 		Vlan 70
-Akureyri Launadeild	 		Vlan 66
-
-Egilsstaðir Söludeild	 		Vlan 68
+#### Laugadagur, 4. Maí
+-   Breytti yfir í Numbers.
 
 
+#### Sunnudagur, 5. Maí
+-   Kláraði að hanna IP tölu töflun
+-   Setti inn í Packet Tracer alla switcha, routera, servera, tölvur og tengdi eins og ég gat.
+-   Bjó til aðra töflu fyrir nákvæmar IP addressur og fleiri net-upplýsingar fyrir allann netbúnað.
 
 
-Network		   		vlan Number name		DHCP pool 				 
-							
-192.168.64.0/24	   		Vlan 64 -Bókhald	  	Vlan 64	  	
-192.168.65.0/24	   		Vlan 65 -Yfirstjórn	  	Vlan 65 
-192.168.66.0/24	  		Vlan 66 -Launadeild	  	Vlan 66
-192.168.67.0/24	   		Vlan 67 -Markaðsdeild  		Vlan 67
-192.168.68.0/24	   		Vlan 68 -Söludeild	  	Vlan 68
-192.168.69.0/24	  		Vlan 69 -Mannauðsdeild 		Vlan 69
-192.168.70.0/24	  		Vlan 70 -Tölvudeild	  	Vlan 70
+#### Mánudagur, 6. Maí
+-   Kláraði VLAN uppsetningu fyrir skólastofur í ísaförður, Reykjavik og Akureyri.
+-   Skipulagði og setti IP tölur á routera.
+-   Setti DHCP route á alla Útibúin.
 
 
-192.168.64.0/21
-192.168.64.0/24 
+#### Sunnudagur,12. Maí
+-   Kláraði DHCP uppsetningu.
+-   Lagaði villu í reykjavík .
 
 
+#### þriðjudagur,14. Maí
+-   Setti upp management vlan ásamt default-gateway á Reykjavik, Egilsstaðir, Akureyri, Isafjörður switchana.
+-   Sub-interfaceaði Reykjavik,Akureyri, Isafjörður og Egilsstaðir.
+-   Bætti við alla VLAN alla switchinn til að getað flutt allt á milli. Sömuleiðis með aðra VLAN á alla switchum .
+-   Breytti um hostnames á helstu tækjum.
+-   Setti upp SSH version 2 á alla switches sem eru með management vlan.
+-   Setti upp helstu öryggisráðstafanir slíkt sem enable secret, line con 0 password, service password-encryption subinterfaces).
+-   Copy run start á allt draslið.
 
- Network		  		Ranges			Broadcast			
- 
-Net			Fyrsta nothæfa		Síðasta nothæfa	     	Broadcast addr.		Subnet mask
-
-Bókhald:
-LAN1 192.168.64.0/24    	192.168.64.1 - 192.168.64.254	  192.168.64.255    		255.255.255.0		
-
-
-Yfirstjórn:
-LAN2 192.168.65.0/24   		192.168.65.1 - 192.168.65.254     192.168.65.255   		255.255.255.0
-
-
-Launadeild:
-LAN3 192.168.66.0/24    	192.168.66.1 - 192.168.66.254     192.168.66.255   		255.255.255.0
-
-
-Markaðsdeild:
-LAN4 192.168.67.0/24    	192.168.67.1 - 192.168.67.254     192.168.67.255   		255.255.255.0
-
-
-Söludeild:
-LAN5 192.168.68.0/24		192.168.68.1	192.168.68.254	  192.168.68.255   		255.255.255.0
-
-
-Mannauðsdeild:
-LAN6 192.168.69.0/24		192.168.69.1	192.168.69.254	  192.168.69.255   		255.255.255.0
-
-
-Tölvudeild:
-LAN7 192.168.70.0/24		192.168.70.1	192.168.70.254	  192.168.70.255   		255.255.255.0
-
-
-
-
-
+# Það sömu sem ég á eftir er að gera DNS, Server-um, leigjanda switch-inn í reykjavik útibúa og  aðgengilega á internetinu.
